@@ -1,34 +1,7 @@
-WiTTy Women
-When you think about great writers, are you missing half the story?
+# WiTTy Women
+## When you think about great writers, are you missing half the story?
+### Take the quiz to find out!
 
-Table of contents
-General info
-Intro Video
-Technologies
-Setup
-Features
-Status
-Inspiration
-Contact
-License
-
-General info
-Since 2016, 
-
-Intro Video
-TacoLandia on YouTube
-
-Technologies
-Ruby - version 2.6.1
-ActiveRecord - version 5.2
-Sinatra - version 2.0
-Sinatra-activerecord - version 2.0
-SQLite3 - version 1.4
-Setup
-To run this project, install it locally by cloning the GitHub repository and typing:
-
-ruby config/environment.rb
-Code Examples
 =======
 # TacoLandia
 > Your new favorite Taco Companion!!!
