@@ -9,3 +9,6 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "sqlite3"
 gem "require_all"
+gem 'artii'
+gem 'tty-prompt'
+gem 'colorize'
