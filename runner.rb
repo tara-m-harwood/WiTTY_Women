@@ -1,34 +1,31 @@
 require_relative 'config/environment'
 
+def prompt
+    TTY::Prompt.new
+end
+
+def welcome_banner
+    banner = Artii::Base.new(:font => "slant")
+    puts banner.asciify("WiTTY Women").blue
+end
+
 def gets_name
-    puts "Welcome, what is your name?"
-    user_name = gets.chomp
+    user_name = prompt.ask("What is your name?")
     User.create name: user_name
-    puts "Hi, #{user_name}"
-end
-
-def serve_question
-    user_question = Question.all.sample
-    puts user_question[:quote]
+    puts "Welcome, #{user_name}! Would you like to test your literary knowledge?"
 end
 
 
-def generate_choices(right_answer)
-    choices = []
-    authors = ["Virginia Woolf", "Toni Morrison", "Amy Tan", "Leslie Marmon Silko", "Dorothy Parker", "Maya Angelou", "Barbara Kingsolver", "Jane Austen"]
-    wrong_authors = authors.filter{ |author| author != right_answer }.sample(3)
-    choices << wrong_authors << right_answer
-    choices.flatten.shuffle 
-end    
-
-
-## main runner
+# main runner
+welcome_banner
 gets_name
-serve_question
+user_question = Question.random
+puts user_question.quote
+puts user_question.choices
 
-# binding.pry
 
-# Cli.new.start_game
+#binding.pry
+#0
 
 
 

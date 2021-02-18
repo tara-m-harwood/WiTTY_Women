@@ -1,6 +1,9 @@
 require 'bundler/setup'
 Bundler.require
 
+ActiveRecord::Base.logger = nil 
+
 require_all 'lib'
 
-ActiveRecord::Base.logger = nil  
+
+ 
