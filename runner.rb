@@ -40,22 +40,19 @@ menu_choice = wants_quiz
             puts ("'#{user_test.question.quote}'").yellow
             user_choice = prompt.select("Who wrote it?",user_test.question.choices)
             user_test.update(user_answer: user_choice)
-            puts ("*********").blue
             if user_choice == user_test.question.right_answer
-                puts ("CORRECT! This is a quote by #{user_test.question.right_answer}!").green
+                puts ("---> CORRECT! This is a quote by #{user_test.question.right_answer}!").green
             else
-                puts ("Sorry! This was actually written by #{user_test.question.right_answer}!").red
-            end        
+                puts ("---> Sorry! This was actually written by #{user_test.question.right_answer}!").red
+            end       
         end
-        # score_history = prompt.select("Do you want to see your score history?", ["Yes","No"])
-        #     if score_history = "Yes"
-        #         show_scores 
+        current_user.test_history
+        current_user.score_summary
 
     end    
 
-
-    binding.pry
-0
+#binding.pry
+#0
 
 
 

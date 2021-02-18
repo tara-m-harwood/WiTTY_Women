@@ -6,20 +6,27 @@ class User < ActiveRecord::Base
         tests_taken = Test.where(user: self)
     end
     
-    def score_history
-        correct = 0
+    def test_history
+        puts "********** QUESTION HISTORY for #{self.name} **********")blue
         all_tests.each do |test|
-            puts "Quote: #{test.question.quote}"
-            puts "Your answer: #{test.user_answer}"
-            puts "Correct answer: #{test.question.right_answer}"
+            puts ("#{test.question.right_answer} wrote: '#{test.question.quote}'").yellow
             if test.user_answer == test.question.right_answer
-                puts ("CORRECT").green
+                puts ("Your answer: #{test.user_answer} | Result: CORRECT").green
             else
-                puts ("INCORRECT").red
+                puts ("Your answer: #{test.user_answer} | Result: INCORRECT").red
             end
             puts ("*****").blue
         end
-    end               
+    end
+    
+    def score_summary
+        number_tests = self.all_tests.length
+        correct_tests = self.all_tests.filter{ |test| test.user_answer == test.question.right_answer }.length
+        correct_pct = (correct_tests.to_f / number_tests.to_f * 100).round
+        puts ("You have taken #{number_tests} tests and answered #{correct_tests} correctly").blue
+        puts ("You have gotten #{correct_pct}% correct!").blue
+    end    
+
 
 end
 
