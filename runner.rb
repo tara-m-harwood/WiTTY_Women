@@ -13,8 +13,9 @@ end
 
 def gets_name
     user_name = prompt.ask("What is your name?")
-    User.create name: user_name
+    current_user = User.create name: user_name
     puts "Welcome, #{user_name}! Would you like to test your literary knowledge?"
+    current_user
 end
 
 def wants_quiz
@@ -23,29 +24,29 @@ end
 
 # main runner
 welcome_banner
-gets_name
+current_user = gets_name
 menu_choice = wants_quiz
     if menu_choice == "Exit"
         puts "Goodbye! See you next time!"
         exit
     else    
         for i in 1..3
-            user_question = Question.random
+            user_test = Test.create user: current_user, question: Question.random
             puts ("*********").blue
-            puts ("'#{user_question.quote}'").yellow
-            user_choice = prompt.select("Who wrote it?",user_question.choices)
+            puts ("'#{user_test.question.quote}'").yellow
+            user_choice = prompt.select("Who wrote it?",user_test.question.choices)
             puts ("*********").blue
-            if user_choice == user_question.right_answer
-                puts ("CORRECT! This is a quote by #{user_question.right_answer}!").green
+            if user_choice == user_test.question.right_answer
+                puts ("CORRECT! This is a quote by #{user_test.question.right_answer}!").green
             else
-                puts ("Sorry! This was actually written by #{user_question.right_answer}!").red
+                puts ("Sorry! This was actually written by #{user_test.question.right_answer}!").red
             end        
         end    
     end    
 
 
-#binding.pry
-#0
+    binding.pry
+0
 
 
 
