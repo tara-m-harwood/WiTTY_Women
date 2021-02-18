@@ -1,10 +1,10 @@
 # WiTTy Women
-## When you think about great writers, are you missing half the story?
+## When you think about legendary writers, are you missing half the story?
 ### Take the quiz to find out!
 
 =======
-# TacoLandia
-> Your new favorite Taco Companion!!!
+# WiTTy Women
+> Test your literary knowledge and expand your horizons!
 
 ## Table of contents
 * [General info](#general-info)
@@ -18,15 +18,13 @@
 * [License](#license)
 
 ## General info
-TacoLandia is a CLI application that allows users to create a profile, discover tacos that match 
-their taste preferences, and gives users the ability to save their favorite tacos. Take the taco 
-compatibility quiz and start your favorites list today!!!
+WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Users will be shown a thought provoking quote and must choose the correct author. They will then be able to save their score or choose to take the quiz again to build upon their knowledge. 
 
 ## Intro Video
 [TacoLandia on YouTube](https://www.youtube.com/watch?v=qxT1I0RSelE)
 
 ## Technologies
-* Ruby - version 2.6.1
+* Ruby - version 2.6.6
 * ActiveRecord - version 5.2
 * Sinatra - version 2.0
 * Sinatra-activerecord - version 2.0
