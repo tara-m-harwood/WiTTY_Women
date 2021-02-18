@@ -10,14 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_232619) do
+ActiveRecord::Schema.define(version: 2021_02_18_160502) do
 
   create_table "questions", force: :cascade do |t|
     t.string "quote"
     t.string "right_answer"
-    t.string "wrong_answer1"
-    t.string "wrong_answer2"
-    t.string "wrong_answer3"
   end
 
   create_table "userquestions", force: :cascade do |t|
