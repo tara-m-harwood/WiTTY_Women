@@ -1,3 +1,4 @@
+
 require_relative 'config/environment'
 
 def prompt
@@ -21,7 +22,8 @@ welcome_banner
 gets_name
 user_question = Question.random
 puts user_question.quote
-puts user_question.choices
+user_choice = prompt.select("Who wrote it?",user_question.choices)
+puts "The correct answer is #{user_question.right_answer}"
 
 
 #binding.pry
