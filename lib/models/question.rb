@@ -4,8 +4,8 @@ class Question < ActiveRecord::Base
 
     ## class methods
 
-    def self.random #returns a random question
-        all.sample
+    def self.random(already_asked) #returns a random question
+        all.excluding(already_asked).sample
     end
 
     def self.authors #returns an array of unique author values from :right_answer

@@ -29,9 +29,13 @@ menu_choice = wants_quiz
     if menu_choice == "Exit"
         puts "Goodbye! See you next time!"
         exit
-    else    
+    else
+        already_asked = []    
         for i in 1..3
-            user_test = Test.create user: current_user, question: Question.random
+            current_question = Question.random(already_asked)
+            already_asked << current_question
+            binding.pry
+            user_test = Test.create user: current_user, question: current_question
             puts ("*********").blue
             puts ("'#{user_test.question.quote}'").yellow
             user_choice = prompt.select("Who wrote it?",user_test.question.choices)
