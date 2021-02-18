@@ -10,27 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_232619) do
+ActiveRecord::Schema.define(version: 2021_02_18_174127) do
 
   create_table "questions", force: :cascade do |t|
     t.string "quote"
     t.string "right_answer"
-    t.string "wrong_answer1"
-    t.string "wrong_answer2"
-    t.string "wrong_answer3"
   end
 
   create_table "userquestions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "question_id"
-    t.boolean "correct"
+    t.string "user_answer"
     t.index ["question_id"], name: "index_userquestions_on_question_id"
     t.index ["user_id"], name: "index_userquestions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "score"
   end
 
 end
