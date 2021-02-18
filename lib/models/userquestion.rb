@@ -1,2 +1,4 @@
 class UserQuestion < ActiveRecord::Base
-end 
+    belongs_to :user
+    belongs_to :question
+end
