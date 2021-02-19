@@ -10,12 +10,12 @@ class User < ActiveRecord::Base
 
     def wants_quiz?
         choices = { "Yes, show me 3 quotes!"=> true, "Exit"=> false }
-        prompt.select("Would you like to test your literary knowledge?", choices)
+        prompt.select("Would you like to test your literary knowledge?", choices, symbols: { marker: "♀"})
     end
 
     def wants_scores?
         choices = { "Yes, show my scores!"=> true, "No"=> false }
-        prompt.select("Do you want to see your score summary", choices)
+        prompt.select("Do you want to see your score summary", choices, symbols: { marker: "♀"})
     end
     
     def administer_quiz
@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
     def recent_questions (num)
         self.questions_asked.last(num)
     end   
-    
+
     def give_test
         question = Question.random_excluding(self.recent_questions(3))
         question.ask

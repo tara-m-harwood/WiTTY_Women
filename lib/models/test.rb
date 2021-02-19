@@ -16,7 +16,7 @@ class Test < ActiveRecord::Base
     end
     
     def recap
-        "#{self.question.right_answer} said: '#{self.question.quote}'"
+        "#{self.question.right_answer} wrote: '#{self.question.quote}'"
     end 
 
     def result
