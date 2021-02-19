@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_18_174127) do
+ActiveRecord::Schema.define(version: 2021_02_18_205842) do
 
   create_table "questions", force: :cascade do |t|
     t.string "quote"
     t.string "right_answer"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "question_id"
+    t.string "user_answer"
+    t.index ["question_id"], name: "index_tests_on_question_id"
+    t.index ["user_id"], name: "index_tests_on_user_id"
   end
 
   create_table "userquestions", force: :cascade do |t|
