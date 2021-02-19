@@ -1,9 +1,9 @@
-# WiTTy Women
+# WiTTY Women
 ## When you think about legendary writers, are you missing half the story?
-### Take the quote quiz to find out!
+### Take our quote quiz to find out!
 
 =======
-# WiTTy Women
+# WiTTY Women
 > Where you can test your literary knowledge and expand your horizons!
 
 ## Table of contents
@@ -18,7 +18,7 @@
 * [License](#license)
 
 ## General info
-WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then be able to see their score and choose to take the quiz again to build upon their knowledge or exit the program. 
+WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then have the option to see their score and choose to take the quiz again to build upon their knowledge or exit the program. The user can choose to view their saved cumulative score before exiting the program.
 
 ## Intro Video
 [WiTTY Women on YouTube](https://www.youtube.com/TBD)
@@ -26,15 +26,20 @@ WiTTy_Women is a CLI application that allows users to create a profile and test 
 ## Technologies
 * Ruby - version 2.6.6
 * ActiveRecord - version 6.0.1
+* Artii - version 2.1.2
+* Colorize version 0.8.1
 * Sinatra - version 2.0.7
 * Sinatra-activerecord - version 2.0.14
 * SQLite3 - version 1.4.1
+* TTY-prompt version 0.23.0
 
 ## Setup
-To run this project, install it locally by cloning the GitHub repository and typing:
-```ruby
-ruby config/environment.rb
-```
+To run this project, install it locally by cloning the GitHub repository. 
+Before loading the program run:
+* bundle install 
+* rake db:migrate
+* rake db:seed
+To run program type: ruby runner.rb
 
 ## Code Examples
 
@@ -54,21 +59,21 @@ def self.update_user_name(user_name)
 end
 
 Features
-Option to take quiz or exit program
-Three randomized quotes provided with choices of authors to select
-Correct or incorrect answers noted after each quote question with correct answer provided
-Final Score provided based upon answers
-Upon completion of quiz, option to take new quiz or exit program
+* Take a quiz from a selection of quotes from prominent female authors!
+* See your score and continue to build your knowlege!
 
 To-do list
-Refactor and streamline code
-Add API functionality to return a recipe for chosen taco
+* Add an option for users to save their log-in information for repeat visits
+* Compare your score to other users
+* Build bank of writers and quotes 
+* Add a randomized quote feature
+* Ability to save quotes to user profile
 
 Status
-Project is completed with potential to expand functionality and DRY out code.
+* Project is completed with potential to expand functionality and DRY out code.
 
 Inspiration
-Our goal was to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope was to build an interactive application that helped our users expand their knowlege. 
+* Our goal is to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope is to provide an interactive application that helps our users expand their knowlege. 
 
 Created by Tara Harwood and Marnie Robinson
 
