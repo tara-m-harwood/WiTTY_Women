@@ -19,7 +19,15 @@ class Question < ActiveRecord::Base
         wrong_answers = Question.authors.filter{ |author| author != self.right_answer }.sample(3)
         choices << wrong_answers
         choices.flatten.shuffle
+    end
+    
+    def ask
+        puts ("'#{self.quote}'").yellow
+    end
+    
+    def get_answer
+        prompt.select("Who wrote it?", self.choices)
     end    
-
+    
 end
 
