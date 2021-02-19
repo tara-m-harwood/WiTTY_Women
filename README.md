@@ -18,7 +18,7 @@
 * [License](#license)
 
 ## General info
-WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then have the option to see their score and choose to take the quiz again to build upon their knowledge or exit the program. The user can choose to view their saved cumulative score before exiting the program.
+WiTTY_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then have the option to see their score and choose to take the quiz again to build upon their knowledge or exit the program. The user can choose to view their saved cumulative score before exiting the program.
 
 ## Intro Video
 [WiTTY Women on YouTube](https://www.youtube.com/TBD)
@@ -35,10 +35,12 @@ WiTTy_Women is a CLI application that allows users to create a profile and test 
 
 ## Setup
 To run this project, install it locally by cloning the GitHub repository. 
+
 Before loading the program run:
 * bundle install 
 * rake db:migrate
 * rake db:seed
+
 To run program type: ruby runner.rb
 
 ## Code Examples
@@ -58,23 +60,23 @@ def self.update_user_name(user_name)
     user_input
 end
 
-Features
+## Features
 * Take a quiz from a selection of quotes from prominent female authors!
 * See your score and continue to build your knowlege!
 
-To-do list
+## To-do list
 * Add an option for users to save their log-in information for repeat visits
 * Compare your score to other users
 * Build bank of writers and quotes 
 * Add a randomized quote feature
 * Ability to save quotes to user profile
 
-Status
+## Status
 * Project is completed with potential to expand functionality and DRY out code.
 
-Inspiration
+## Inspiration
 * Our goal is to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope is to provide an interactive application that helps our users expand their knowlege. 
 
-Created by Tara Harwood and Marnie Robinson
+## Created by Tara Harwood and Marnie Robinson
 
 Feel free to contact us!!
