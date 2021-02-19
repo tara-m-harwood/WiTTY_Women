@@ -25,6 +25,7 @@ end
 # main runner
 welcome_banner
 current_user = gets_name
+
 menu_choice = wants_quiz
     if menu_choice == "Exit"
         puts "Goodbye! See you next time!"
@@ -34,23 +35,24 @@ menu_choice = wants_quiz
         for i in 1..3
             current_question = Question.random(already_asked)
             already_asked << current_question
-            binding.pry
             user_test = Test.create user: current_user, question: current_question
             puts ("*********").blue
             puts ("'#{user_test.question.quote}'").yellow
             user_choice = prompt.select("Who wrote it?",user_test.question.choices)
-            puts ("*********").blue
+            user_test.update(user_answer: user_choice)
             if user_choice == user_test.question.right_answer
-                puts ("CORRECT! This is a quote by #{user_test.question.right_answer}!").green
+                puts ("---> CORRECT! This is a quote by #{user_test.question.right_answer}!").green
             else
-                puts ("Sorry! This was actually written by #{user_test.question.right_answer}!").red
-            end        
-        end    
+                puts ("---> Sorry! This was actually written by #{user_test.question.right_answer}!").red
+            end       
+        end
+        current_user.test_history
+        current_user.score_summary
+
     end    
 
-
-    binding.pry
-0
+#binding.pry
+#0
 
 
 
