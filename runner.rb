@@ -24,11 +24,13 @@ loop do
     if user.wants_quiz?
         user.administer_quiz
         if user.wants_scores?
-             user.test_history
-             user.score_summary
+             user.show_scores
         end    
     else
         user.goodbye
         break
     end
 end            
+
+binding.pry
+0
