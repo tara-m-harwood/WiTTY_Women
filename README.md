@@ -98,7 +98,7 @@ give_test with helper functions
 * Project is completed with potential to expand functionality and DRY out code.
 
 ## Inspiration
-* Our goal is to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope is to provide an interactive application that helps our users expand their knowlege. 
+* Our goal is to share these words of wisdom and engage users to acknowledge the women responsible for this inspiration! Our hope is to provide an interactive application that helps our users expand their knowlege. 
 
 ### Created by Tara Harwood and Marnie Robinson
 Feel free to reach out!
