@@ -1,10 +1,10 @@
 # WiTTy Women
 ## When you think about legendary writers, are you missing half the story?
-### Take the quiz to find out!
+### Take the quote quiz to find out!
 
 =======
 # WiTTy Women
-> Test your literary knowledge and expand your horizons!
+> Where you can test your literary knowledge and expand your horizons!
 
 ## Table of contents
 * [General info](#general-info)
@@ -18,17 +18,17 @@
 * [License](#license)
 
 ## General info
-WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Users will be shown a thought provoking quote and must choose the correct author. They will then be able to save their score or choose to take the quiz again to build upon their knowledge. 
+WiTTy_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then be able to see their score and choose to take the quiz again to build upon their knowledge or exit the program. 
 
 ## Intro Video
-[TacoLandia on YouTube](https://www.youtube.com/watch?v=qxT1I0RSelE)
+[WiTTY Women on YouTube](https://www.youtube.com/TBD)
 
 ## Technologies
 * Ruby - version 2.6.6
-* ActiveRecord - version 5.2
-* Sinatra - version 2.0
-* Sinatra-activerecord - version 2.0
-* SQLite3 - version 1.4
+* ActiveRecord - version 6.0.1
+* Sinatra - version 2.0.7
+* Sinatra-activerecord - version 2.0.14
+* SQLite3 - version 1.4.1
 
 ## Setup
 To run this project, install it locally by cloning the GitHub repository and typing:
@@ -52,29 +52,24 @@ def self.update_user_name(user_name)
     old_name.update(name: user_input)
     user_input
 end
-Features
-Browse tacos by protein type
-Return a random taco from the database
-See taco details
-Save tacos to favorites list
-Remove tacos from favorites list
-Take the Taco Compatibility Quiz
-To-do list:
 
-Refactor “code smell”
+Features
+Option to take quiz or exit program
+Three randomized quotes provided with choices of authors to select
+Correct or incorrect answers noted after each quote question with correct answer provided
+Final Score provided based upon answers
+Upon completion of quiz, option to take new quiz or exit program
+
+To-do list
+Refactor and streamline code
 Add API functionality to return a recipe for chosen taco
-Discover local restaurants serving tacos
-Integrate matching photos to tacos
+
 Status
-Project is: finished with option to expand functionality and DRY out code.
+Project is completed with potential to expand functionality and DRY out code.
 
 Inspiration
-The inspiration for TacoLandia came from a restaurant API that did not return the information we were looking for. Using our own love of tacos, we set out to build a fun, interactive, and clean UX/UI that would bring other users joy!
+Our goal was to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope was to build an interactive application that helped our users expand their knowlege. 
 
-Contact
-Created by Catherine O'Hara and Taylor Stein
+Created by Tara Harwood and Marnie Robinson
 
-Feel free to contact us!!! 🌮
-
-License
-Click to view
+Feel free to contact us!!
