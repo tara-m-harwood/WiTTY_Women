@@ -21,7 +21,7 @@
 WiTTY_Women is a CLI application that allows users to create a profile and test their literary knowledge of some legendary female writers. Upon opting to take the quiz, users will be shown a thought provoking quote and must select the correct author. They will then have the option to see their score and choose to take the quiz again to build upon their knowledge or exit the program. The user can choose to view their saved cumulative score before exiting the program.
 
 ## Intro Video
-[WiTTY Women on YouTube](https://www.youtube.com/TBD)
+[WiTTY Women on YouTube](https://youtu.be/fp3M3IRSgJ0)
 
 ## Technologies
 * Ruby - version 2.6.6
