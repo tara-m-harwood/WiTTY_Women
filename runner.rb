@@ -40,6 +40,7 @@ menu_choice = wants_quiz
             puts ("'#{user_test.question.quote}'").yellow
             user_choice = prompt.select("Who wrote it?",user_test.question.choices)
             user_test.update(user_answer: user_choice)
+
             if user_choice == user_test.question.right_answer
                 puts ("---> CORRECT! This is a quote by #{user_test.question.right_answer}!").green
             else
