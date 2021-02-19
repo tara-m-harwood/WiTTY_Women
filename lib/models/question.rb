@@ -26,7 +26,7 @@ class Question < ActiveRecord::Base
     end
     
     def get_answer
-        prompt.select("Who wrote it?", self.choices, symbols: { marker: "♀"})
+        prompt.select("Who wrote it?", self.choices, symbols: { marker: "📖"})
     end    
     
 end
