@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     end
     
     def test_history
-        puts "********** QUESTION HISTORY for #{self.name} **********")blue
+        puts ("********** QUESTION HISTORY FOR #{self.name.upcase} **********").blue
         all_tests.each do |test|
             puts ("#{test.question.right_answer} wrote: '#{test.question.quote}'").yellow
             if test.user_answer == test.question.right_answer
