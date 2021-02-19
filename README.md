@@ -45,23 +45,25 @@ To run program type: ruby runner.rb
 
 ## Code Examples
 
-* main runner
-welcome_banner
-user = prompt_to_create_user
-user.greeting
-loop do
-    if user.wants_quiz?
-        user.administer_quiz
-        if user.wants_scores?
-             user.show_scores
-        end    
-    else
-        user.goodbye
-        break
-    end
-end  
+main runner
 
-* give_test with helper functions
+    welcome_banner
+    user = prompt_to_create_user
+    user.greeting
+    loop do
+        if user.wants_quiz?
+            user.administer_quiz
+            if user.wants_scores?        
+                user.show_scores             
+            end       
+        else  
+            user.goodbye    
+            break    
+        end 
+    end  
+
+give_test with helper functions
+    
     def tests_taken
         Test.where(user: self)
     end
@@ -69,6 +71,7 @@ end
     def questions_asked
         self.tests_taken.map{ |test| test.question}
     end 
+    
     def recent_questions (num)
         self.questions_asked.last(num)
     end   
@@ -97,6 +100,5 @@ end
 ## Inspiration
 * Our goal is to share these words of wisdom and engage users to awknowledge the women responsible for this inspiration! Our hope is to provide an interactive application that helps our users expand their knowlege. 
 
-## Created by Tara Harwood and Marnie Robinson
-
-Feel free to contact us!!
+### Created by Tara Harwood and Marnie Robinson
+Feel free to reach out!
