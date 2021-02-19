@@ -45,20 +45,40 @@ To run program type: ruby runner.rb
 
 ## Code Examples
 
-def self.get_taco_details(taco)
-    returned_taco = Taco.find_by(name: taco)
-    puts "Name: " + returned_taco.name + " Taco"
-    puts "Protein: " + returned_taco.protein
-    puts "Heat Level: " + returned_taco.heat_level.to_s
-    puts "Shell Type: " + returned_taco.shell_type
-end
-def self.update_user_name(user_name)
-    old_name = User.find_by(name: user_name)
-    puts "What is your new name friend?"
-    user_input = gets.chomp
-    old_name.update(name: user_input)
-    user_input
-end
+* main runner
+welcome_banner
+user = prompt_to_create_user
+user.greeting
+loop do
+    if user.wants_quiz?
+        user.administer_quiz
+        if user.wants_scores?
+             user.show_scores
+        end    
+    else
+        user.goodbye
+        break
+    end
+end  
+
+* give_test with helper functions
+    def tests_taken
+        Test.where(user: self)
+    end
+
+    def questions_asked
+        self.tests_taken.map{ |test| test.question}
+    end 
+    def recent_questions (num)
+        self.questions_asked.last(num)
+    end   
+
+    def give_test
+        question = Question.random_excluding(self.recent_questions(3))
+        question.ask
+        answer = question.get_answer
+        Test.create user: self, question: question, user_answer: answer
+    end
 
 ## Features
 * Take a quiz from a selection of quotes from prominent female authors!
